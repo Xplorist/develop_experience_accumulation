@@ -1,0 +1,48 @@
+針對url中的中文亂碼
+
+前台js代碼
+encodeURI(response.data);
+alert("1"+decodeURI(response.data));
+alert("2"+decodeURIComponent(response.data));
+--------------------------------------------------------------
+java後台代碼：
+URLEncoder.encode(name+suffix, "UTF-8")
+java後台解碼：
+URLDecoder.decode(subname, "UTF-8");
+
+---------------------------------------------------------------
+關於在html之間傳值的中文亂碼問題
+發送頁面需要進行兩次加密：encodeURI(encodeURI($scope.projectName))
+接收頁面一次解碼：        decodeURI($scope.geturl("projectName"))
+
+---------------------------------------------------------------
+javascript中的编码有三种方法:escape （不推荐，对ASCII符号正确编码）、encodeURI、encodeURIComponent
+
+1.escape （不推荐，对ASCII符号正确编码）
+2.encodeURI：用于对网址编码(不包含参数)
+3.encodeURIComponent:用于对网址参数进行编码
+---------------------------------------------------------------
+
+encodeURI：用于对网址编码(不包含参数)
+
+　　　　encodeURI不编码字符有82个：!，#，$，&，'，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z
+
+　　　　encodeURI就是为这个而设计的。encodeURI不对URI中的特殊字符进行编码，如冒号(:)、斜杠(/)。下面看个示例：
+
+encodeURI("http://www.cnblogs.com/a file with spaces.html")
+// outputs http://www.cnblogs.com/a%20file%20with%20spaces.html
+　　　　可以看到仅仅把空格替换成了20%，所以此方法可用于对网址进行编码。
+
+　　　　由于encodeURI不对冒号(:)、斜杠(/)进行编码，所以如果参数(如把网址作为参数)中包含冒号(:)、斜杠(/)，就会解析出错，所以此方法不能对参数进行编码。
+
+ 
+
+ 　　encodeURIComponent:用于对网址参数进行编码
+
+　　　　encodeURIComponent不编码字符有71个：!， '，(，)，*，-，.，_，~，0-9，a-z，A-Z
+
+　　　　可以看到此方法对:/都进行了编码，所以不能用它来对网址进行编码。由于此方法对中文，空格，井号(#)，斜线(/)，冒号(:)都进行了编码，所以适合对URI中的参数进行编码。看下面的示例：
+
+var param="博客园";
+var url="http://www.cnblogs.com/?key="+encodeURIComponent(param)+"&page=1";
+console.log(url);//outputs http://www.cnblogs.com/?key=%E5%8D%9A%E5%AE%A2%E5%9B%AD&page=1

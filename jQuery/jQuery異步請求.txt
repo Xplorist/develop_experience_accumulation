@@ -1,0 +1,16 @@
+$.ajax({
+	url : "xxx!xx.action",
+	data : {
+		'xxx' : 'xxxx'
+	},
+	dataType : 'json',
+	type : 'post',
+	async : true,
+	error : function(XMLHttpRequest, textStatus, errorThrown) {
+		console.log(textStatus);
+		alert("請求失敗");
+	},
+	success : function(response) {
+		alert(response);
+	}
+});

@@ -1,0 +1,8 @@
+select t.lordprcsid, t.lordprcsname
+  from FL_FPROCESS t
+ where t.p_id = 'DCA2C426B53A4EC58D51EA731F450CD7'
+start with t.prelordprcsid is null
+connect by prior t.lordprcsid = t.prelordprcsid
+
+其實start with 。。 connect by prior 的用法就是為了查詢多條上下關聯的數據
+查詢樹結構，start with 定義查詢的根節點，connect by prior 表示起始節點和後面的節點相連的方式
