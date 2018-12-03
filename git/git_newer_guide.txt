@@ -1,0 +1,23 @@
+1.git 常用命令：
+  git init
+  git clone -b 分支名 git@github.com:xplorist/template.git
+  git branch
+  git checkout
+  git add
+  git rm
+  git status
+  git commit -m ""
+  git push origin 分支名
+  git pull
+  git merge
+  git branch -d 分支名
+  git remote show origin
+  git push origin --delete 分支名
+  git branch -a 
+2.ssh 代理設置：
+	在C:\Users\mcebgadmin\.ssh中創建config文件（沒有後綴名）內容如下：
+	Host github.com *.github.com
+	ProxyCommand connect -H http://10.244.186.81:8088 %h %p   
+	IdentityFile /C/Users/mcebgadmin/.ssh/id_rsa      
+	User git
+	具體ssh到github設置參考http://www.runoob.com/git/git-remote-repo.html
