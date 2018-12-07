@@ -12,6 +12,8 @@
   git merge
   git branch -d 分支名
   git remote show origin
+  git remote add origin url
+  git remote set-url origin url
   git push origin --delete 分支名
   git branch -a 
 2.ssh 代理設置：
