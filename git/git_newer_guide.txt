@@ -16,6 +16,7 @@
   git remote set-url origin url
   git push origin --delete 分支名
   git branch -a 
+  git config --global http.postBuffer 524288000
 2.ssh 代理設置：
 	在C:\Users\mcebgadmin\.ssh中創建config文件（沒有後綴名）內容如下：
 	Host github.com *.github.com
