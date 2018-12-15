@@ -24,3 +24,5 @@
 	IdentityFile /C/Users/mcebgadmin/.ssh/id_rsa      
 	User git
 	具體ssh到github設置參考http://www.runoob.com/git/git-remote-repo.html
+3.git 官方網址：https://git-scm.com/
+  git 官方書籍：https://git-scm.com/book/en/v2 本網頁中可以直接進行下載電子書。
