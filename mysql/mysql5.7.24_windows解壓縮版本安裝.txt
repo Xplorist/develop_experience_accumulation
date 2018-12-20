@@ -31,7 +31,8 @@ character-set-server=utf8
 # 创建新表时将使用的默认存储引擎
 default-storage-engine=INNODB
 -----------------------------------------------------------
-6.以管理員身份運行cmd命令窗口，并執行相應操作,初始化成功，并生成初始化密碼，注意一定要把密碼截圖或者是抄下來。
+6.以管理員身份運行cmd命令窗口運行，
+并執行相應操作,初始化成功，并生成初始化密碼，注意一定要把密碼截圖或者是抄下來。
 A temporary password is generated for root@localhost:9P3gtcAf68!u
 初始密碼為：9P3gtcAf68!u
 -----------------------------------------------------------
@@ -51,7 +52,12 @@ mysqld --defaults-file=D:\1ProgramInstall\mysql\mysql-5.7.24-win32\my.ini
 -----------------------------------------------------------
 9.首次連線需要修改root密碼
 -----------------------------------------------------------
-  mysql -uroot -p  
+  mysql -u root -p  
   mysql> set password=password("mysql");
   mysql> flush privileges;
 -----------------------------------------------------------
+10. 管理員身份運行cmd
+	停止服務
+  net stop mysql
+	删除服务
+  sc delete mysql

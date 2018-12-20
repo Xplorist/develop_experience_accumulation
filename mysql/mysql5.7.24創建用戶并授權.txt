@@ -19,6 +19,10 @@ localhost同创建用户，如果对所有远程计算机生效，改成%
 GRANT all ON *.* TO 'username'@'%';
 GRANT all ON *.* TO 'voidx'@'%';
 
+因为当前有很多数据库工具和链接包都不支持“caching_sha2_password”，为了方便，
+暂时还是改回了“mysql_native_password”认证插件。
+ALTER USER 'voidx'@'%' IDENTIFIED WITH mysql_native_password BY 'Pi=3.1415926';
+
 4、补充：
 
 4.1、查看用户授权：
