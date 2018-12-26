@@ -1,6 +1,7 @@
 重點是select中的數據要加載完成，而且ng-model中的數據是select下拉列表中的相同數據
 如下示例：
-selectedProject的值和projectInformationList中的值相同。網頁上就能夠顯示出來，id相同，value就能夠被選中。
+selectedProject的值和projectInformationList中的值相同。網頁上就能夠顯示出來，id相同，value就能夠被選中,
+id的值和類型都要相同。
 
 html：
 <th>
