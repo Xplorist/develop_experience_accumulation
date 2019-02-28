@@ -6,15 +6,18 @@ alert("1"+decodeURI(response.data));
 alert("2"+decodeURIComponent(response.data));
 --------------------------------------------------------------
 java後台代碼：
-URLEncoder.encode(name+suffix, "UTF-8")
+URLEncoder.encode(name+suffix, "UTF-8");
 java後台解碼：
 URLDecoder.decode(subname, "UTF-8");
-
+---------------------------------------------------------------
+後台加密并對空格進行替換：
+URLEncoder.encode(name+suffix, "UTF-8").replace("+", "%20");
+前台解密：
+decodeURIComponent(response.data);
 ---------------------------------------------------------------
 關於在html之間傳值的中文亂碼問題
 發送頁面需要進行兩次加密：encodeURI(encodeURI($scope.projectName))
 接收頁面一次解碼：        decodeURI($scope.geturl("projectName"))
-
 ---------------------------------------------------------------
 javascript中的编码有三种方法:escape （不推荐，对ASCII符号正确编码）、encodeURI、encodeURIComponent
 
@@ -36,8 +39,7 @@ encodeURI("http://www.cnblogs.com/a file with spaces.html")
 　　　　由于encodeURI不对冒号(:)、斜杠(/)进行编码，所以如果参数(如把网址作为参数)中包含冒号(:)、斜杠(/)，就会解析出错，所以此方法不能对参数进行编码。
 
  
-
- 　　encodeURIComponent:用于对网址参数进行编码
+encodeURIComponent:用于对网址参数进行编码
 
 　　　　encodeURIComponent不编码字符有71个：!， '，(，)，*，-，.，_，~，0-9，a-z，A-Z
 

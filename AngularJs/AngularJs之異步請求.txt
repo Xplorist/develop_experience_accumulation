@@ -11,5 +11,5 @@ $http({
 	alert(response.data.xxx);
 },function errorCallBack(error){
 	console.log(error);
-	alert("請求失敗！")
+	alert("請求失敗！");
 });
