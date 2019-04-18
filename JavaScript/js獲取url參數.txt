@@ -1,5 +1,5 @@
-$scope.getUrlfn = function(name) {
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+$scope.getUrlParam = function(param) {
+	var reg = new RegExp("(^|&)" + param + "=([^&]*)(&|$)");
 	var r = window.location.search.substr(1).match(reg);
 	if (r != null) return decodeURI(r[2]);
 	return null;

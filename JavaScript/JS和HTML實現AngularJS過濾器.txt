@@ -17,8 +17,7 @@ JS:
 $scope.myFilter = function () {
 	if ($scope.selectm==='') {
 		$scope.newemp = $scope.rmanlist;
-	}
-	else {
+	}else {
 		$scope.newemp = [];
 		for (var i = 0; i < $scope.rmanlist.length; i++) {
 			var a = $scope.rmanlist[i].empno;

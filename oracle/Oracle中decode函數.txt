@@ -1,0 +1,7 @@
+decode (expression, search_1, result_1)
+decode (expression, search_1, result_1, search_2, result_2)
+decode (expression, search_1, result_1, search_2, result_2, ...., search_n, result_n)
+
+decode (expression, search_1, result_1, default)
+decode (expression, search_1, result_1, search_2, result_2, default)
+decode (expression, search_1, result_1, search_2, result_2, ...., search_n, result_n, default)

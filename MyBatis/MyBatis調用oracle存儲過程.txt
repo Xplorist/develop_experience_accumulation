@@ -1,0 +1,27 @@
+存儲過程：
+CREATE OR REPLACE Procedure queryTeacher(fid In Integer,Type In Varchar,Name Out Varchar)
+As
+Begin
+If Type='1' then
+Select Name Into Name From student Where id=fid;
+Else if Type='2' Then
+Select Name Into Name From teacher Where id=fid;
+Else 
+ Name:='错误';
+End If;
+End If;
+End;
+
+xml文件：
+<select id="queryTeacher" statementType="CALLABLE" parameterType="java.util.Map">
+	   {call queryTeacher(#{fid,mode=IN,jdbcType=INTEGER},#{type,mode=IN,jdbcType=VARCHAR},#{name,mode=OUT,jdbcType=VARCHAR})}
+</select>
+	
+java代碼執行輸入并取出輸出值：
+Map<String,Object> mm=new HashMap<String,Object>();
+ mm.put("fid", 3);
+ mm.put("type", 2);
+ m.queryTeacher(mm);
+System.out.println(mm.get("name"));
+
+ 
