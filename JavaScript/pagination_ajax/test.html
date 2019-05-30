@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+    <!-- 分页css -->
+    <link rel="stylesheet" href="pages.css">
+ 
+    <style type="text/css">
+        html,body,div {padding: 0;margin: 0;}
+        html {font-family: '微软雅黑', Arial, Verdana, arial, serif;}
+        #content div {padding: 10px;background: #f2f2f2;margin-bottom: 1px;}
+    </style>
+ 
+</head>
+ 
+<body>
+    <div id="content"></div>
+    <!-- 分页DOM -->
+    <div id="pagination" class="pagination"></div>
+ 
+    <!-- 引入分页js -->
+    <script src="pages.js"></script>
+    <!-- ajax函数,需要了解请点击这里:https://blog.csdn.net/u012780176/article/details/79278479 -->
+    <script src="ajax.js"></script>
+    <script>
+    window.onload = function() {
+        var url = 'https://cnodejs.org/api/v1/topics?limit=10&page=';
+        var content = document.getElementById('content');
+        var tmp = '';
+ 
+        // 进入页面初始化请求第一页数据
+        getData(1);
+ 
+        // 使用ajax函数请求数据并渲染到页面
+        function getData(page) {
+            content.innerHTML = '正在加载...';
+            ajax({
+                url: url + page,
+                type: "get",
+                dataType: "json",
+                success: function(data) {
+					myPagi.dataTotal = 50;
+					myPagi.pageAmount = 5;
+					myPagi.pageTotal = 10;
+                    var list = data.data;
+                    list.forEach(function(context) {
+                        tmp += '<div>' + context.title + '</div>';
+                    });
+                    content.innerHTML = tmp;
+                    tmp = '';
+                },
+                error: function(err) {
+                    alert('请求数据失败');
+                }
+            })
+        }
+ 
+        
+        // 示例化分页组件
+        var myPagi = new myPagination({
+            id: 'pagination',
+            curPage: 1, //初始页码
+            pageTotal: 50, //总页数
+            pageAmount: 10, //每页多少条
+            dataTotal: 500, //总共多少条数据
+            pageSize: 5, //可选,分页个数
+            showPageTotalFlag: true, //是否显示数据统计
+            showSkipInputFlag: true, //是否支持跳转
+            getPage: function(page) {
+              // 点击分页按钮请求数据
+                getData(page);
+            }
+        });
+    }
+    </script>
+</body>
+ 
+</html>
