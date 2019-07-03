@@ -44,4 +44,6 @@ hot = new Handsontable(container, {
   licenseKey: 'non-commercial-and-evaluation'
 });
 
-hot.loadData(result.item_list);
+hot.loadData(result.item_list); 
+
+關鍵在於dataSchema屬性和columns屬性，省去了後台傳遞到前端后將list數據轉換成二維數組

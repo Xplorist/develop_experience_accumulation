@@ -20,3 +20,7 @@
 	</div><!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+js:
+$("#myModal").modal("show");// 打開模態框
+$("#myModal").modal("hide");// 隱藏模態框
