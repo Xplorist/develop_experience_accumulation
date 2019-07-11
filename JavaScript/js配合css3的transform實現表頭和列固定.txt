@@ -81,6 +81,6 @@ js:
 			}
         }
 
-        tableCont.addEventListener('scroll',scrollHandle);
+        tableCont.addEventListener('scroll', scrollHandle);
     }
 </script>
