@@ -17,10 +17,18 @@ where time = decode(sign(sysdate-trunc(sysdate)-16/24), --时间判断
                      -1,trunc(sysdate)-1+16/24, --小于16点取昨天16点
                         trunc(sysdate)+16/24)  --大于16点取当天16点 
 
-						
+------------------------------------------------------------------------------------------------------------------------------------------------						
 --時間比較
 createtime >to_date( ''2006-04-08 00:00:01','yyyy-mm-dd hh24:mi:ss') and createtime<to_date(''2006-04-08 10:00:01','yyyy-mm-dd hh24:mi:ss')或者
 
 createtime >to_date( ''20060408000001','yyyymmddhh24miss') and createtime<to_date(''20060408100001','yyyymmddhh24miss')
 
-						
+-----------------------------------------------------------------------------------------------------------------------------------------------
+timestamp類型 和 date類型
+
+获得当前时间：
+select sysdate from dual; 		--date類型
+select systimestamp from dual;	--timestamp類型
+
+timestamp to date:(隐式转换)
+select systimestamp+0 from dual;
