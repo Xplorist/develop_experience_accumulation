@@ -41,3 +41,4 @@
 	git config --global user.name "Your Name"
 	git config --global http.proxy http://10.244.186.81:8088
 	git config --global credential.helper wincred
+	git config --global credential.helper store
