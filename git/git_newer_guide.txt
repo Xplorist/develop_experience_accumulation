@@ -36,3 +36,6 @@
 	$ ssh -T git@github.com
 	如果提示ssh: connect to host github.com port 22: Connection refused
 	有可能是公司內部網絡需要代理，查看上面的shh代理設置的內容
+5.設置全局賬號
+	git config --global user.email "you@example.com"
+	git config --global user.name "Your Name"
