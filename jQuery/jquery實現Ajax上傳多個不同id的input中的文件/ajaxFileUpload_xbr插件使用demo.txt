@@ -11,7 +11,8 @@ $.ajaxFileUpload_xbr({
 	fileElementIds : ['picFile', 'drawFile', 'groupFile', 'dfmFile'], // input[type='file']中name必須和id相同不然後台取不到文件
 	dataType : 'json',
 	data : {
-		"xxx": xxx
+		"xxx": xxx,
+		"xxObject": JSON.stringify(xxObject) // 如果data中要傳輸對象，將JavaScript對象轉換成json格式的字符串
 	},
 	success : function(data) {
 		if (!data.picFilePkid) {
@@ -26,3 +27,12 @@ $.ajaxFileUpload_xbr({
 		alert("文件上傳異常");
 	}
 });
+
+如果data中要傳輸對象，將對象轉換成json格式的字符串
+JSON.stringify(mainInfo)
+後台直接用String類接收json格式的字符串
+然後將這個json字符串通過fastjson轉換成java對象
+
+後台實例：
+import com.alibaba.fastjson.JSON;
+NewMouldMainBean bean = JSON.parseObject(mainInfo, NewMouldMainBean.class);
