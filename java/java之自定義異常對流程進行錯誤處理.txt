@@ -1,0 +1,17 @@
+result = "1";
+try {
+	// 流程代碼
+	dfmFilePkid = newMouldDrawUpload(dfmFile, "dfm", dfmFileFileName);
+	
+	// 判斷代碼
+	if(groupFilePkid == null) 
+			|| (dfmFile != null && dfmFilePkid == null)) {
+		throw new Exception("addSave is failed");
+	}
+} catch (Exception e) {
+	result = "0";
+	e.printStackTrace();
+}
+return result;
+
+通過判斷標誌主動拋出異常從而得出流程正常執行還是出現了異常。
