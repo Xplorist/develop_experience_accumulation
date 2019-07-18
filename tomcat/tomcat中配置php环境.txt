@@ -1,7 +1,0 @@
-参考网址：
-1.
-https://blog.csdn.net/weixin_42582102/article/details/86509941 
-这个貌似不行，无法解析php，但是能够访问静态页面内容
-
-2.
-https://www.jianshu.com/p/6ed8b1ae275a
