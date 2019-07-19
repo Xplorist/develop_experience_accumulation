@@ -1,5 +1,5 @@
 1.PKID 主鍵id
-2.USE_FLAG 是否有效
+2.VALID_FLAG 是否有效
 3.CREATOR 創建人
 4.CREATE_DATE 創建日期
 5.UPDATER 修改人
