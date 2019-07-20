@@ -12,6 +12,7 @@ lay('#version').html('-v'+ laydate.v);
 laydate.render({
   elem: '#query_need_date', 
   format: 'yyyy/MM/dd',
+  range: true,
   done: function(value, date, endDate) {
 	  $scope.query_need_date = value;
   }
