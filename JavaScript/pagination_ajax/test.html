@@ -34,10 +34,10 @@
         getData(1);
  
         // 使用ajax函数请求数据并渲染到页面
-        function getData(page) {
+        function getData(pageIndex) {
             content.innerHTML = '正在加载...';
             ajax({
-                url: url + page,
+                url: url + pageIndex,
                 type: "get",
                 dataType: "json",
                 success: function(data) {
@@ -58,7 +58,7 @@
         }
  
         
-        // 示例化分页组件
+        // 實例化分页组件
         var myPagi = new myPagination({
             id: 'pagination',
             curPage: 1, //初始页码
@@ -68,11 +68,24 @@
             pageSize: 5, //可选,分页个数
             showPageTotalFlag: true, //是否显示数据统计
             showSkipInputFlag: true, //是否支持跳转
-            getPage: function(page) {
+            getPage: function(pageIndex) {
               // 点击分页按钮请求数据
-                getData(page);
+                getData(pageIndex);
             }
         });
+		
+		/*
+		實際運用說明：
+			實際使用的時候，因為是用Ajax，數據可以不用本例子中的ajax的插件，
+			getData()函數的作用基本上就是為了渲染列表數據，在實際使用中，不會
+			使用本例子中的getData()函數。
+			在異步請求中，將pageIndex和pageAmount作為參數傳到後台，
+			後台返回dataTotal，pageTotal並把這兩個值賦給分頁配置對象myPagi的
+			相應屬性。
+			動態修改myPagi的屬性值，需要重新加載new myPagination(...)函數的方式
+			去修改。
+		*/
+		 
     }
     </script>
 </body>
