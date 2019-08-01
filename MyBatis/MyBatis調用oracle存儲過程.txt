@@ -12,16 +12,19 @@ End If;
 End If;
 End;
 
+mapper接口
+void queryTeacher(Map<String,Object> map);
+
 xml文件：
 <select id="queryTeacher" statementType="CALLABLE" parameterType="java.util.Map">
 	   {call queryTeacher(#{fid,mode=IN,jdbcType=INTEGER},#{type,mode=IN,jdbcType=VARCHAR},#{name,mode=OUT,jdbcType=VARCHAR})}
 </select>
 	
 java代碼執行輸入并取出輸出值：
-Map<String,Object> mm=new HashMap<String,Object>();
- mm.put("fid", 3);
- mm.put("type", 2);
- m.queryTeacher(mm);
-System.out.println(mm.get("name"));
+Map<String,Object> map = new HashMap<String,Object>();
+map.put("fid", 3);//輸入
+map.put("type", 2);
+mapper.queryTeacher(map);
+Object name = map.get("name");// 輸出
 
  
