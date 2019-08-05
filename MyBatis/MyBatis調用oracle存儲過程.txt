@@ -17,7 +17,11 @@ void queryTeacher(Map<String,Object> map);
 
 xml文件：
 <select id="queryTeacher" statementType="CALLABLE" parameterType="java.util.Map">
-	   {call queryTeacher(#{fid,mode=IN,jdbcType=INTEGER},#{type,mode=IN,jdbcType=VARCHAR},#{name,mode=OUT,jdbcType=VARCHAR})}
+   {call queryTeacher(#{fid, mode=IN, jdbcType=INTEGER},
+					  #{type, mode=IN, jdbcType=VARCHAR},
+					  #{name, mode=OUT, jdbcType=VARCHAR}
+					 )
+   }
 </select>
 	
 java代碼執行輸入并取出輸出值：
