@@ -13,10 +13,10 @@ app.controller("myController",function($scope, $http,$timeout) {
 
 			$.ajaxFileUpload({
 						type : "POST",
-						url : '../../FileUpDown/FileUploadAction!fileUpload',
+						url : '../../FileUpDown/FileUploadAction!fileUpload.action',
 						async : false,
 						secureuri : false,
-						fileElementId : 'file',
+						fileElementId : 'file',// 此id的input元素的name和id必須相同
 						dataType : 'json',
 						data : {
 							'file_origin_name' : vOriginalName
@@ -44,7 +44,7 @@ app.controller("myController",function($scope, $http,$timeout) {
 	
 	// 文件下載
 	$scope.downfile = function(file_save_name) {
-		$.fileDownload('../../FileUpDown/FileDownloadAction', {
+		$.fileDownload('../../FileUpDown/FileDownloadAction.action', {
 			httpMethod : "POST",
 			data : {
 				'fileName' : file_save_name,
@@ -56,7 +56,7 @@ app.controller("myController",function($scope, $http,$timeout) {
 	// 文件刪除
 	$scope.delFile = function(file_save_name, file_save_path) {
 		$.ajax({
-			url : "../../FileUpDown/FileUploadAction!fileDelete",
+			url : "../../FileUpDown/FileUploadAction!fileDelete.action",
 			data : {
 				'file_save_name' : file_save_name,
 				'file_save_path' : file_save_path
