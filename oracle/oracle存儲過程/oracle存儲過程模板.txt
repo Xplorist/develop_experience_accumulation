@@ -8,7 +8,7 @@ Begin
     If (判断条件) then
        Select 列名 into 变量2 from 表A where列名=param1；
        Dbms_output。Put_line(‘打印信息’);
-    Elsif (判断条件) then
+    Else if (判断条件) then
        Dbms_output。Put_line(‘打印信息’);
     Else
        Raise 异常名（NO_DATA_FOUND）;
