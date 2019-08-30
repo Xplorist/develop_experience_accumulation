@@ -16,4 +16,16 @@ select t2.*
  返回的數據中row_total是總行數
  總頁數是page_total
  page_total = row_total % pageSize == 0 ? row_total / pageSize : (row_total / pageSize) + 1;
+ // 注意此行代碼後還有 + 1;
  
+ --------------------------------------------------------
+ 參數
+ 
+ 1.查詢條件中的參數：
+	pageIndex -- （類型：Integer）第几頁 
+	pageSize  -- （類型：Integer）每頁條數
+ 
+ 2.返回結果中的參數：
+	row_num -- （類型：Integer）第几行
+	row_total -- （類型：Integer）總行數
+	page_total --（類型：Integer） 總頁數（java後台中進行計算）

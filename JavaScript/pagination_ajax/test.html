@@ -69,7 +69,7 @@
             showPageTotalFlag: true, //是否显示数据统计
             showSkipInputFlag: true, //是否支持跳转
             getPage: function(pageIndex) {
-              // 点击分页按钮请求数据
+				// 点击分页按钮请求数据
                 getData(pageIndex);
             }
         });
@@ -82,8 +82,8 @@
 			在異步請求中，將pageIndex和pageAmount作為參數傳到後台，
 			後台返回dataTotal，pageTotal並把這兩個值賦給分頁配置對象myPagi的
 			相應屬性。
-			動態修改myPagi的屬性值，需要重新加載new myPagination(...)函數的方式
-			去修改。
+			動態修改myPagi的屬性值，需要重新加載myPagi = new myPagination(...)函數
+			的方式去修改。
 		*/
 		 
     }
