@@ -1,7 +1,12 @@
-Java基于JWT的token认证
+java之簡單實現MD5註冊登錄
 
 參考網址：
-https://zhuanlan.zhihu.com/p/74799633
+https://blog.csdn.net/zwj1030711290/article/details/81843329
+https://www.baeldung.com/java-md5
+
+代碼示例GitHub網址：
+https://github.com/Xplorist/bidding
+
 
 ---------------------------------------------------------------------
 md5加token驗證的註冊登錄思路：

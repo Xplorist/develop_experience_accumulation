@@ -1,7 +1,10 @@
-Java基于JWT的token认证
+Java之jwt實現token驗證
 
 參考網址：
 https://zhuanlan.zhihu.com/p/74799633
+
+代碼示例GitHub網址：
+https://github.com/Xplorist/bidding
 
 ---------------------------------------------------------------------
 md5加token驗證的註冊登錄思路：
