@@ -1,0 +1,26 @@
+Vue-cli 3.x配置跨域代理
+
+参考网址：
+https://segmentfault.com/a/1190000016602951
+https://segmentfault.com/a/1190000014474361
+https://github.com/chimurai/http-proxy-middleware#proxycontext-config
+
+創建vue.config.js
+
+vue.config.js內容如下：
+
+// vue.config.js
+module.exports = {
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://10.168.1.118:8081',
+                changeOrigin: true,
+                ws: true,
+                pathRewrite: {
+                  '^/api': ''
+                }
+            }
+        }
+    }
+}
