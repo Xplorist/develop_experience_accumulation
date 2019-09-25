@@ -8,6 +8,7 @@ html:
 <div id="app">
     <input type="file" @change="update_file($event)">
     <img :src="img_src">
+	<a :href="img_src">下載{{ file_origin_name }}</a>
 </div>
 
 -------------------------------------------------------------------------------------
@@ -341,5 +342,7 @@ public class Pic_Show_Controller {
     }
 }
 
-
+// 備註html中用<a href="/api/pic_show/load?file_save_path=xxx&file_save_name=yyy&file_origin_name=zzz">
+// 來實現下載
+-------------------------------------------------------------------------------------
 
