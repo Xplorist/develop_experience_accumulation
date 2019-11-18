@@ -4,7 +4,6 @@
 
 而在 Markdown 中，你只需要在文本前面加上 # 即可，同理、你还可以增加二级标题、三级标题、四级标题、五级标题和六级标题，总共六级，只需要增加 # 即可，标题字号相应降低。例如：
 
-
     # 一级标题
     ## 二级标题
     ### 三级标题
@@ -65,7 +64,6 @@
 
 引用的案例截图：
 
- 
 粗体和斜体
 
 Markdown 的粗体和斜体也非常简单，用两个 * 包含一段文本就是粗体的语法，用一个 * 包含一段文本就是斜体的语法。例如：
@@ -78,14 +76,12 @@ Markdown 的粗体和斜体也非常简单，用两个 * 包含一段文本就�
 
 粗体和斜体的案例截图：
 
- 
 代码引用
 
 需要引用代码时，如果引用的语句只有一段，不分行，可以用 ` 将语句包起来。
 如果引用的语句为多行，可以将```置于这段代码的首行和末行。
 代码引用的案例截图：
 
- 
 表格
 
 相关代码：
@@ -97,10 +93,10 @@ Markdown 的粗体和斜体也非常简单，用两个 * 包含一段文本就�
     | zebra stripes | are neat      |    $1 |
 
 显示效果：
-Tables 	Are 	Cool
-col 3 is 	right-aligned 	$1600
-col 2 is 	centered 	$12
-zebra stripes 	are neat 	$1
+Tables     Are     Cool
+col 3 is     right-aligned     $1600
+col 2 is     centered     $12
+zebra stripes     are neat     $1
 
 <p></p>
 相关代码：
@@ -112,10 +108,10 @@ zebra stripes 	are neat 	$1
     baz | baz  | baz
 
 显示效果：
-dog 	bird 	cat
-foo 	foo 	foo
-bar 	bar 	bar
-baz 	baz 	baz
+dog     bird     cat
+foo     foo     foo
+bar     bar     bar
+baz     baz     baz
 
 <p></p>
 显示链接中带括号的图片
