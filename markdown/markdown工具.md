@@ -25,3 +25,9 @@ MarkText的GitHub网址：https://github.com/marktext/marktext
 除了MarkText只能够开一个窗口外，不是MarkText也是可以开多个窗口的。
 
 好的，结论就是Typora彻底失宠了。
+****
+又看到一款新的MarkDown工具：iA Writer
+
+官網地址：https://ia.net/zh-hans/writer
+
+****
