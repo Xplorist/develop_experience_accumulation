@@ -13,5 +13,3 @@
 | SublimeText      | 全能                     |                    |                 |
 | MarkText         | 目前最好用的所見即所得MarkDown編輯器 |                    |                 |
 | HbuilderX        | 前端好用                   |                    |                 |
-
-
