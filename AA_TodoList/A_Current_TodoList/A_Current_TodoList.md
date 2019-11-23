@@ -12,8 +12,10 @@
   - [ ] MyBatis官方的分頁
   
   - [ ] 阿里Java開發手冊
-  * [ ] Java日誌--log4j
+  * [x] Java日誌--log4j
   - [ ] Java測試--junit
+  
+  - [x] SpringBoot定時任務
   
   - [ ] GitBook
   
