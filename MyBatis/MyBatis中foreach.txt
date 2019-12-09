@@ -9,6 +9,14 @@
 	and t.email is not null
 </select>
 
+<if test="spids.size()>0 " >
+        and  SPid not in
+        <foreach collection="spids" item="id" index="index"
+                 open="(" close=")" separator=",">
+          #{id}
+        </foreach>
+</if>
+
 注意：
 #{item, jdbcType=VARCHAR} 在item中要指定jdbc類型
 collection說明：
