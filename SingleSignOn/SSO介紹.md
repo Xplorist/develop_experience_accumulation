@@ -1,0 +1,23 @@
+### SSO介紹
+
+****
+
+SSO: single sign on （單點登錄）
+
+> 參考網址：
+> 
+> * cookie, session,token: [https://zhuanlan.zhihu.com/p/94983714](https://zhuanlan.zhihu.com/p/94983714)
+> 
+> * 單點登錄（掘金）： [https://juejin.im/post/5cdd42f9518825693f1ebf8d](https://juejin.im/post/5cdd42f9518825693f1ebf8d)
+> 
+> *  單點登錄（云栖社區）： [https://yq.aliyun.com/articles/636281](https://yq.aliyun.com/articles/636281)
+> 
+> * 簡單代碼實現： https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485189&idx=1&sn=44e9558f3a03f9c5e1ec539e1a10dbe2&chksm=ebd74604dca0cf126c64586b448ee8c7bccd51545d7a27d06b21bc75a2e390f961d7cafac375&token=1875959808&lang=zh_CN#rd
+> 
+> * GitHub:  https://github.com/ZhongFuCheng3y/3y
+
+****
+
+.
+
+
