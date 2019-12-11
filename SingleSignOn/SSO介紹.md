@@ -19,6 +19,10 @@ SSO: single sign on （單點登錄）
 > * 基于Spring Security Oauth2的SSO单点登录+JWT权限控制实践：[https://juejin.im/post/5cd0c66e6fb9a0324715702f](https://juejin.im/post/5cd0c66e6fb9a0324715702f)
 > 
 > * GitHub （基于Spring Security Oauth2的SSO单点登录+JWT权限控制实践）： [https://github.com/hansonwang99/Spring-Boot-In-Action/tree/master/springbt_sso_jwt](https://github.com/hansonwang99/Spring-Boot-In-Action/tree/master/springbt_sso_jwt)
+> 
+> * [http://kba977.github.io/2017/12/04/Web%E5%BC%80%E5%8F%91/%E4%BD%BF%E7%94%A8JWT%E5%92%8CSpringBoot%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F/](http://kba977.github.io/2017/12/04/Web%E5%BC%80%E5%8F%91/%E4%BD%BF%E7%94%A8JWT%E5%92%8CSpringBoot%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F/)
+> 
+> * [https://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/](https://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/)
 
 ****
 
