@@ -28,11 +28,7 @@
 
   4. gitbook build 組建打包生成靜態HTML項目
 
-<<<<<<< HEAD
-> [在内网通过GitBook打造电子书](https://blog.csdn.net/sinat_33087001/article/details/102019613)
-=======
   5. 將生成靜態HTML項目部署到Nginx服務器上，這樣就生成了一本在線書籍了
->>>>>>> a705b4d143e43fb0e87d2c89c92d4dc0e0e774c5
 
 ****
 
